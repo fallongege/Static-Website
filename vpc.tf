@@ -186,6 +186,7 @@ resource "aws_security_group" "internal_security_group" {
   }
 }
 
+# Create a Network interface 
 resource "aws_network_interface" "TestInterface" {
   subnet_id = aws_subnet.TestPubSubnet1.id
 
@@ -193,6 +194,7 @@ resource "aws_network_interface" "TestInterface" {
     Name = "primary_network_interface"
   }
 }
+# Specify data source for an ec2 instsnce to be provisioned!!
 data "aws_ami" "amazon_linux_2" {
   most_recent = true
 
@@ -209,6 +211,7 @@ data "aws_ami" "amazon_linux_2" {
   owners = ["137112412989"] #Amazon
 }
 
+# Provision an ec2 instance
 resource "aws_instance" "TestInstance1" {
   ami                         = data.aws_ami.amazon_linux_2.id
   instance_type               = "t2.micro"
