@@ -1,20 +1,11 @@
-variable "vpc_cidr" {
-   
+variable "ami_id" { 
 }
+variable "instance_type" {
+    default = "t2.micro"
+}
+variable "ec2_count" {
+    default = "1"
+  }
 
-variable "tenancy" {
-  default = "default"
-}
-variable "vpc_id" {
-}
-
-variable "subnet_cidr" {
-   
-}
-
- variable "route_table_id" {
-}
 variable "subnet_id" {
-}
-variable "route_table_association_id" {
-}
+  }
