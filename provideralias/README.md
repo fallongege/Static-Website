@@ -1,0 +1,1 @@
+All providers support the use of the alias meta-argument, which enables you to give a provider an alias for reference. When creating resources using that provider, you can specify the alias of the provider instance to use
