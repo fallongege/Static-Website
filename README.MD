@@ -1,0 +1,1 @@
+This homework focused on to create and work with modules, workspace--to isolate infrastructure into different environments,and some terraform function such lookup, map(string) etc.
