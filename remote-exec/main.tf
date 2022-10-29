@@ -16,9 +16,9 @@ resource "aws_instance" "first-ec2" {
   }
   provisioner "remote-exec" {
     inline = [
-	  "sudo yum update -y",
+    "sudo yum update -y",
     "sudo yum install httpd -y",
-	  "sudo systemctl start httpd",
+    "sudo systemctl start httpd",
     "sudo systemctl enable httpd",
     ]
   }
